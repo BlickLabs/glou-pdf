@@ -1,0 +1,13 @@
+server {
+  listen 80;
+  listen [::]:80;
+
+  root /home/static/glou-pdf;
+  index index.html index.htm;
+
+  server_name sandbox.glou.getmore.mx www.sandbox.glou.getmore.mx glou.mx www.glou.mx;
+
+  location / {
+    try_files $uri $uri/ =404;
+  }
+}
